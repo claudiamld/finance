@@ -6,7 +6,7 @@ export default createGlobalStyle`
         padding: 0;
     }
 
-    h1, h2, h3, h4, p, button, input, body{
+    h1, h2, h3, h4, p, button, input, body, select{
         font-family: 'Nunito', sans-serif;
     }  
 

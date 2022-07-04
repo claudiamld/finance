@@ -1,7 +1,3 @@
-// font-family: 'Nunito', sans-serif;
-// font-family: 'Poppins', sans-serif;
-// font-family: 'Tiro Devanagari Sanskrit', serif;
-
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -25,7 +21,7 @@ export const LeftSide = styled.div`
     max-width: 50%;
 
     h1{
-        color: #FD377E;
+        color: #219ebc;
         font-size: 26px;
         font-weight: bold;
     }

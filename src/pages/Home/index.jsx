@@ -1,4 +1,4 @@
-import { useHistory, Redirect } from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
 import ImageHome from '../../assets/image.svg'
 import { Button } from '../../components/Button'
 import { Container, LeftSide, Content, RightSide } from './styles'
