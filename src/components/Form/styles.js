@@ -3,22 +3,22 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 30%;
     border: 1px solid #E9ECEF;
     border-radius: 4px;
-    margin-top: 20px;
+    padding: 30px 20px;
 
     form{
         display: flex;
         flex-direction: column;
-        padding: 30px 20px;
+        max-width: 100%;
+
 
         input{
             background-color: #e5e5e5;
-            border: none;
-            border-radius: 8px;
             padding: 12px 15px;
             font-size: 16px;
+            border: none;
+            border-radius: 8px;
             :focus{
               border: none;
               outline: 1px solid #868E96;
@@ -26,7 +26,7 @@ export const Container = styled.div`
         }
 
         label{
-            color: #495057;
+            color: #023047;
             font-weight: bold;
             margin-bottom: 5px;
         }
@@ -40,18 +40,22 @@ export const Container = styled.div`
         .valuebox{
             display: flex;
             margin: 15px 0px 30px 0px;
+            max-width: 100%;
 
             div{
                 display: flex;
                 flex-direction: column;
+                max-width: 50%;
+                width: 50%;
             }
 
             input{
-                max-width: 50%;
+                max-width: 60%;
             }
 
             select{
                 background-color: #e5e5e5;
+                width: 80%;
                 color: #868E96;
                 border: none;
                 padding: 12px 15px;
