@@ -11,23 +11,22 @@ export const TransactionsProvider = ({children}) => {
     const addTransaction = (newTransaction) => {
         setTransactions([...transactions, newTransaction])
 
-        if (newTransaction.valueType === 'receive'){
+        if (newTransaction.valueType === 'Entrada'){
             setReceives([...receives, newTransaction])
-        } else if(newTransaction.valueType === "withdraw"){
+        } else if(newTransaction.valueType === "Despesa"){
             setWithdraws([...withdraws, newTransaction])
         }
     }
 
     const deleteTransaction = (value) => {
-        const newArr = transactions.filter((transaction) => transaction.id !== value);
-        setTransactions(newArr)
+        const newList = transactions.filter((transaction) => transaction.id !== value);
+        setTransactions(newList)
     }
 
-
     const calculateTotal = () => {
-        const positive = transactions.filter(transaction => transaction.valueType === 'Entrada').reduce((acc, currValue) => currValue.value + acc, 0)
-        const negative = transactions.filter(transaction => transaction.valueType === 'Despesa').reduce((acc, currValue) => currValue.value + acc, 0)
-        const result = positive - negative
+        const positiveBalance = transactions.filter(transaction => transaction.valueType === 'Entrada').reduce((acc, currValue) => currValue.value + acc, 0)
+        const negativeBalance = transactions.filter(transaction => transaction.valueType === 'Despesa').reduce((acc, currValue) => currValue.value + acc, 0)
+        const result = positiveBalance - negativeBalance
         setTotal(result)
     }
 
@@ -41,12 +40,3 @@ export const TransactionsProvider = ({children}) => {
         </TransactionsContext.Provider>
     )
 }
-
-
-
-
-
-//STATES: 
-    //1 - Entradas 
-    //2 - Saídas
-    //3 - Saldo

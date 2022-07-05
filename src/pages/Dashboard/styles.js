@@ -53,7 +53,7 @@ export const Content = styled.div`
 `
 
 export const CardsListContent = styled.div`
-    width: 55%;
+    width: 60%;
     .emptyList{
         h2{
             margin-bottom: 20px;
